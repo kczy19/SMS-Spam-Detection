@@ -6,6 +6,13 @@ from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 nltk.download('stopwords')
 
+st.set_page_config(
+   page_title="Email/SMS Spam Classified",
+   page_icon="📧",
+   #layout="wide",
+   initial_sidebar_state="expanded",
+)
+
 tfidf = pickle.load(open('vectorizer.pkl','rb'))
 model = pickle.load(open('model.pkl','rb'))
 
